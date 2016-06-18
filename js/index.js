@@ -3,7 +3,6 @@
     var winW = document.documentElement.clientWidth;
     document.documentElement.style.fontSize = winW / desW * 100 + "px";
 }(640);
-
 //->给滑屏区域进行初始化设置
 ~function () {
     var step = 0, divList = null;
@@ -35,8 +34,6 @@
             curDiv.id = index === step ? curDiv.getAttribute("trueId") : null;
         });
     }
-
-    //->给区域增加一个loop:true的时候,会自己往开头和结尾各增加一张一模一样的,但是我还需要把区域定位到“真实的第一张”,所以开始会自己向下切换一次,我们让初始的step=0即可
 }();
 
 //->音频的自动播放
